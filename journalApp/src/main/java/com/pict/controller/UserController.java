@@ -30,7 +30,7 @@ public class UserController {
         else return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @PostMapping("/")
+    @PostMapping
     public ResponseEntity<User> insertUser(@RequestBody User obj) {
         try{
             service.enterUser(obj);
