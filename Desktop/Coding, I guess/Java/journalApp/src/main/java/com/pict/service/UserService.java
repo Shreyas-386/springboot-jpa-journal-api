@@ -1,0 +1,46 @@
+package com.pict.service;
+
+import com.pict.entity.User;
+import com.pict.repository.UserRepository;
+import jakarta.transaction.Transactional;
+import org.apache.logging.log4j.util.Base64Util;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class UserService {
+    @Autowired
+    private UserRepository repository;
+
+    private static final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+
+    public List<User> getAllEntries() {
+        return repository.findAll();
+    }
+
+    public User getUserById(int id) {
+        return repository.findById(id).orElse(null);
+    }
+
+    public User getByUsername(String name) {
+        return repository.findByName(name).orElse(null);
+    }
+
+    public void enterUser(User obj) {
+        obj.setPassword(passwordEncoder.encode(obj.getPassword()));
+        repository.save(obj);
+    }
+
+    public void updateUser(User obj) {
+        repository.save(obj);
+    }
+
+    @Transactional
+    public void deleteUser(String username) {
+        repository.deleteByName(username);
+    }
+}
