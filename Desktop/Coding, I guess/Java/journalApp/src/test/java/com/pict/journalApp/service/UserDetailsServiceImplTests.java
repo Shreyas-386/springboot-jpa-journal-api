@@ -1,17 +1,15 @@
-package com.pict.service;
+package com.pict.journalApp.service;
 
-import com.pict.repository.UserRepository;
+import com.pict.journalApp.repository.UserRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import com.pict.entity.User;
+import com.pict.journalApp.entity.User;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Optional;

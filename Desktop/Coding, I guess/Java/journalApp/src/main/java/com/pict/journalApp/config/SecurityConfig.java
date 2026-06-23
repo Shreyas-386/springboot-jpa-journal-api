@@ -1,6 +1,6 @@
-package com.pict.config;
+package com.pict.journalApp.config;
 
-import com.pict.service.UserDetailsServiceImpl;
+import com.pict.journalApp.service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

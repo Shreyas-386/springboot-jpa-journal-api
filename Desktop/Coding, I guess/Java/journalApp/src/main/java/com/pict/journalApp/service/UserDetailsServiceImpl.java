@@ -1,7 +1,7 @@
-package com.pict.service;
+package com.pict.journalApp.service;
 
-import com.pict.entity.User;
-import com.pict.repository.UserRepository;
+import com.pict.journalApp.entity.User;
+import com.pict.journalApp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.userdetails.UserDetails;

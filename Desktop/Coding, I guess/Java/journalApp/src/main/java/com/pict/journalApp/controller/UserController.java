@@ -1,10 +1,11 @@
-package com.pict.controller;
+package com.pict.journalApp.controller;
 
-import com.pict.entity.User;
-import com.pict.service.UserService;
-import jakarta.persistence.GeneratedValue;
+import com.pict.journalApp.entity.User;
+import com.pict.journalApp.service.UserService;
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
@@ -19,6 +20,9 @@ public class UserController {
     @Autowired
     private UserService service;
 
+    private static final Logger log =
+            LoggerFactory.getLogger(UserController.class);
+
     @GetMapping
     public List<User> getAllUsers() {
         return service.getAllEntries();
@@ -32,11 +36,14 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<User> insertUser(@RequestBody User obj) {
+        System.out.println("Controller hit");
+        log.info("Inserting user");
         try{
             service.enterUser(obj);
             return new ResponseEntity<>(HttpStatus.CREATED);
         }
         catch(Exception e) {
+            log.error("Failure due to wrong input : {}", String.valueOf(e));
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }

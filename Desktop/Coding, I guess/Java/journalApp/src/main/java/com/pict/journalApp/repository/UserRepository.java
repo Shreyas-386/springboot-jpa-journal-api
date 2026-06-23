@@ -1,6 +1,6 @@
-package com.pict.repository;
+package com.pict.journalApp.repository;
 
-import com.pict.entity.User;
+import com.pict.journalApp.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

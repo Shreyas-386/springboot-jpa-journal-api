@@ -1,9 +1,7 @@
-package com.pict.service;
+package com.pict.journalApp.service;
 
-import com.pict.repository.UserRepository;
-import lombok.AllArgsConstructor;
+import com.pict.journalApp.repository.UserRepository;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,15 +1,13 @@
-package com.pict.service;
+package com.pict.journalApp.service;
 
-import com.pict.entity.JournalEntry;
-import com.pict.entity.User;
-import com.pict.repository.UserRepository;
+import com.pict.journalApp.entity.JournalEntry;
+import com.pict.journalApp.entity.User;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.pict.repository.JournalEntryRepository;
+import com.pict.journalApp.repository.JournalEntryRepository;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class JournalEntryService {

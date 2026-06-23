@@ -1,21 +1,18 @@
-package com.pict.controller;
+package com.pict.journalApp.controller;
 
-import com.pict.entity.JournalEntry;
-import com.pict.entity.User;
-import com.pict.service.UserService;
+import com.pict.journalApp.entity.JournalEntry;
+import com.pict.journalApp.entity.User;
+import com.pict.journalApp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
-import com.pict.service.JournalEntryService;
+import com.pict.journalApp.service.JournalEntryService;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/journal")

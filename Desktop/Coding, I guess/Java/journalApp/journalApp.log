@@ -1,0 +1,4 @@
+2026-06-23 01:40:27.808 [http-nio-8080-exec-6] INFO  c.p.j.controller.UserController - Inserting user
+2026-06-23 01:40:42.420 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-23 01:40:42.423 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-23 01:40:42.430 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

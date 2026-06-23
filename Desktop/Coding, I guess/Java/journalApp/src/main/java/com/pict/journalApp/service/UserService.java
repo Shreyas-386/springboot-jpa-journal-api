@@ -1,9 +1,9 @@
-package com.pict.service;
+package com.pict.journalApp.service;
 
-import com.pict.entity.User;
-import com.pict.repository.UserRepository;
+import com.pict.journalApp.entity.User;
+import com.pict.journalApp.repository.UserRepository;
 import jakarta.transaction.Transactional;
-import org.apache.logging.log4j.util.Base64Util;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;

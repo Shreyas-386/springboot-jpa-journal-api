@@ -1,0 +1,33 @@
+2026-06-23 01:30:21.072 [restartedMain] INFO  c.pict.journalApp.JournalApplication - Starting JournalApplication using Java 25.0.2 with PID 24540 (C:\Users\Shreyas Chavan\Desktop\Coding, I guess\Java\journalApp\target\classes started by Shreyas Chavan in C:\Users\Shreyas Chavan\Desktop\Coding, I guess\Java\journalApp)
+2026-06-23 01:30:21.076 [restartedMain] INFO  c.pict.journalApp.JournalApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-23 01:30:21.118 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-23 01:30:21.121 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-23 01:30:21.511 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-23 01:30:21.549 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2026-06-23 01:30:21.920 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-06-23 01:30:21.927 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-23 01:30:21.929 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-23 01:30:21.929 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-06-23 01:30:21.966 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-23 01:30:21.966 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 845 ms
+2026-06-23 01:30:22.069 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-23 01:30:22.102 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-23 01:30:22.122 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-06-23 01:30:22.268 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-23 01:30:22.285 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-23 01:30:22.543 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66876553
+2026-06-23 01:30:22.545 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-23 01:30:22.586 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-23 01:30:23.168 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-23 01:30:23.215 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-23 01:30:23.426 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-23 01:30:23.638 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-23 01:30:23.829 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@8e49c3a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@527be15b, org.springframework.security.web.context.SecurityContextHolderFilter@3d090184, org.springframework.security.web.header.HeaderWriterFilter@3b64692b, org.springframework.web.filter.CorsFilter@21a34f4, org.springframework.security.web.authentication.logout.LogoutFilter@2cad689b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@28b09d4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73287eff, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@72aa58b0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@163d250a, org.springframework.security.web.access.ExceptionTranslationFilter@27b1a294, org.springframework.security.web.access.intercept.AuthorizationFilter@299772b6]
+2026-06-23 01:30:23.956 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-06-23 01:30:23.964 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-06-23 01:30:23.974 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2026-06-23 01:30:23.979 [restartedMain] INFO  c.pict.journalApp.JournalApplication - Started JournalApplication in 3.149 seconds (process running for 3.542)
+2026-06-23 01:30:29.871 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-23 01:30:29.872 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-23 01:30:29.874 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-06-23 01:30:30.640 [http-nio-8080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('a' (code 97)): was expecting comma to separate Object entries]
