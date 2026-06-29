@@ -7,3 +7,9 @@ logging:
     com:
       pict:
         journalApp: "INFO"
+
+api:
+  weather:
+    key: 3dadb03dd43742f4907170138262906
+  quote:
+    key: gaNiTGhP7cjpaXOgGWpyodPHvauTP1Cd1IDejnKb

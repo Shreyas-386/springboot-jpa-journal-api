@@ -1,8 +1,10 @@
 package com.pict.journalApp.controller;
 
+import com.pict.journalApp.api.response.QuoteResponse;
 import com.pict.journalApp.entity.User;
+import com.pict.journalApp.service.QuoteService;
 import com.pict.journalApp.service.UserService;
-import lombok.extern.slf4j.Slf4j;
+import com.pict.journalApp.service.WeatherService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +13,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/user")
@@ -23,9 +23,19 @@ public class UserController {
     private static final Logger log =
             LoggerFactory.getLogger(UserController.class);
 
+    @Autowired
+    private QuoteService quoteService;
+
+    @Autowired
+    private WeatherService weatherService;
+
     @GetMapping
-    public List<User> getAllUsers() {
-        return service.getAllEntries();
+    public ResponseEntity<?> greeting() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        return new ResponseEntity<>("Hi " + authentication.getName() +
+                " Quote of the day : "+ quoteService.getQuote()[0].getQuote() +
+                " Temp in London : " + weatherService.getTemp().getCurrent().getTemp_c(),
+                HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
@@ -36,7 +46,6 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<User> insertUser(@RequestBody User obj) {
-        System.out.println("Controller hit");
         log.info("Inserting user");
         try{
             service.enterUser(obj);
