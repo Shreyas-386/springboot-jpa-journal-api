@@ -1,0 +1,1 @@
+2026-07-01 17:52:10.785 [http-nio-8080-exec-2] WARN  o.s.s.c.bcrypt.BCryptPasswordEncoder - Encoded password does not look like BCrypt

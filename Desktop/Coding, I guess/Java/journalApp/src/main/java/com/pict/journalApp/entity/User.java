@@ -23,6 +23,9 @@ public class User {
     @Column(nullable = false)
     private String password;
 
+    @ElementCollection(fetch = FetchType.EAGER)
+    private List<String> Roles = new ArrayList<>();
+
     @OneToMany(
             mappedBy = "user",
             cascade = CascadeType.ALL,
