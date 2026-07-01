@@ -1,6 +1,7 @@
 package com.pict.journalApp.service;
 
 import com.pict.journalApp.api.response.WeatherResponse;
+import com.pict.journalApp.cache.AppCache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpMethod;
@@ -13,13 +14,14 @@ public class WeatherService {
     @Value("${api.weather.key}")
     private String apiKey;
 
-    private static final String API = "http://api.weatherapi.com/v1/current.json?key=VAL&q=London&aqi=no";
-
     @Autowired
     private RestTemplate restTemplate;
 
+    @Autowired
+    private AppCache appCache;
+
     public WeatherResponse getTemp() {
-        String finalAPI = API.replace("VAL", apiKey);
+        String finalAPI = appCache.appCache.get("weather-api").replace("VAL", apiKey);
         ResponseEntity<WeatherResponse> response = restTemplate.exchange(finalAPI, HttpMethod.GET, null, WeatherResponse.class);
         WeatherResponse body = response.getBody();
         return body;

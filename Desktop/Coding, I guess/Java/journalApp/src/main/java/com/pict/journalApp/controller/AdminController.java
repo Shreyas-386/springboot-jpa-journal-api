@@ -1,5 +1,6 @@
 package com.pict.journalApp.controller;
 
+import com.pict.journalApp.cache.AppCache;
 import com.pict.journalApp.entity.User;
 import com.pict.journalApp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,5 +32,19 @@ public class AdminController {
         }
         userService.saveAdmin(user);
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
+    }
+
+    @Autowired
+    private AppCache appCache;
+
+    @GetMapping("/clear-app-cache")
+    public ResponseEntity<?> reInitializeCache() {
+        try{
+            appCache.init();
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
     }
 }

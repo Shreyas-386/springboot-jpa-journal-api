@@ -1,6 +1,7 @@
 package com.pict.journalApp.service;
 
 import com.pict.journalApp.api.response.QuoteResponse;
+import com.pict.journalApp.cache.AppCache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpMethod;
@@ -13,13 +14,14 @@ public class QuoteService {
     @Value("${api.quote.key}")
     private String apikey;
 
-    private static final String API = "https://api.api-ninjas.com/v2/randomquotes?X-Api-Key=API&category=happiness";
-
     @Autowired
     private RestTemplate restTemplate;
 
+    @Autowired
+    private AppCache appCache;
+
     public QuoteResponse[] getQuote() {
-        String finalAPI = API.replace("API", apikey);
+        String finalAPI = appCache.appCache.get("quote-api").replace("API", apikey);
         ResponseEntity<QuoteResponse[]> response = restTemplate.exchange(finalAPI, HttpMethod.GET, null, QuoteResponse[].class);
         QuoteResponse[] body = response.getBody();
         return body;
