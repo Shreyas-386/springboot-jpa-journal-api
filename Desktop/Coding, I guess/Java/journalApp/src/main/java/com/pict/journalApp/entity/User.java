@@ -20,6 +20,10 @@ public class User {
     @Column(unique = true, nullable = false)
     private String name;
 
+    private String email;
+
+    private boolean sentimentAnalysis;
+
     @Column(nullable = false)
     private String password;
 

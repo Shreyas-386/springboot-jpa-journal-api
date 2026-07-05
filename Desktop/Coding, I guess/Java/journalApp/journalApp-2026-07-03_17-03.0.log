@@ -1,0 +1,24 @@
+2026-07-03 17:03:00.778 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.pict.journalApp.service.EmailServiceTests]: EmailServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-03 17:03:00.905 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.pict.journalApp.JournalApplication for test class com.pict.journalApp.service.EmailServiceTests
+2026-07-03 17:03:01.026 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2026-07-03 17:03:01.248 [main] INFO  c.p.j.service.EmailServiceTests - Starting EmailServiceTests using Java 25.0.2 with PID 9116 (started by Shreyas Chavan in C:\Users\Shreyas Chavan\Desktop\Coding, I guess\Java\journalApp)
+2026-07-03 17:03:01.249 [main] INFO  c.p.j.service.EmailServiceTests - No active profile set, falling back to 1 default profile: "default"
+2026-07-03 17:03:01.802 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-03 17:03:01.855 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 4 JPA repository interfaces.
+2026-07-03 17:03:02.254 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-03 17:03:02.305 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-07-03 17:03:02.338 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-03 17:03:02.542 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-03 17:03:02.565 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-03 17:03:02.883 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2be50bba
+2026-07-03 17:03:02.885 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-03 17:03:02.929 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-03 17:03:03.627 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-03 17:03:03.681 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-03 17:03:04.135 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-03 17:03:04.460 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-03 17:03:04.727 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@76093fa9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@547d3e8e, org.springframework.security.web.context.SecurityContextHolderFilter@3e1ba156, org.springframework.security.web.header.HeaderWriterFilter@1f9af742, org.springframework.web.filter.CorsFilter@6f823df7, org.springframework.security.web.authentication.logout.LogoutFilter@2b3b25ad, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7f5ba1bf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6a2d1f6d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f2a13c7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4afdcdf6, org.springframework.security.web.access.ExceptionTranslationFilter@60f9fb56, org.springframework.security.web.access.intercept.AuthorizationFilter@7a461744]
+2026-07-03 17:03:04.998 [main] INFO  c.p.j.service.EmailServiceTests - Started EmailServiceTests in 3.972 seconds (process running for 5.001)
+2026-07-03 17:03:10.852 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-03 17:03:10.854 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-03 17:03:10.863 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
