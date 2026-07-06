@@ -1,8 +1,12 @@
 package com.pict.journalApp.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.pict.journalApp.enums.Sentiment;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.time.LocalDateTime;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -20,6 +24,10 @@ public class JournalEntry {
 
     @Column(nullable = false)
     private String content;
+
+    private LocalDateTime date;
+
+    private Sentiment sentiment;
 
     @ManyToOne()
     @JoinColumn(name = "user_id", nullable = false)
