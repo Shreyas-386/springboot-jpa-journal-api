@@ -10,12 +10,10 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/public")
 public class PublicController {
     @Autowired
     private UserService service;
@@ -42,11 +40,15 @@ public class PublicController {
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody User user) {
         try {
+            System.out.println("1");
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(user.getName(), user.getPassword())
             );
+            System.out.println("2");
             UserDetails userDetails = userDetailsService.loadUserByUsername(user.getName());
+            System.out.println("3");
             String jwt = jwtUtil.generateToken(userDetails.getUsername());
+            System.out.println("4");
             return new ResponseEntity<>(jwt, HttpStatus.OK);
         }
         catch(Exception e) {
